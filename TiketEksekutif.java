@@ -1,9 +1,10 @@
-public class TiketEksekutif extends Tiket { //Inheritance
-    public TiketEksekutif(String jenis, String tujuan, double harga, Penumpang penumpang) {
-        super(jenis, tujuan, harga, penumpang); //panggil parent class
+public class TiketEksekutif extends Tiket {
+    public TiketEksekutif(Kereta kereta, Penumpang penumpang) {
+        super(kereta, penumpang);
     }
-    @Override //Polymorphism (dari hitungHarga)
+
+    @Override
     double hitungHarga() {
-        return harga + 100000;
+        return kereta.getHarga() + 100000;
     }
 }

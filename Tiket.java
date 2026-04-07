@@ -1,13 +1,9 @@
 public abstract class Tiket { //abstract
     protected Penumpang penumpang;
-    protected String jenis;
-    protected String tujuan;
-    protected double harga;
+    protected Kereta kereta;
 
-    public Tiket(String jenis, String tujuan, double harga, Penumpang penumpang) {
-        this.jenis = jenis;
-        this.tujuan = tujuan;
-        this.harga = harga;
+    public Tiket(Kereta kereta, Penumpang penumpang) {
+        this.kereta = kereta;
         this.penumpang = penumpang;
     }
 
@@ -15,8 +11,8 @@ public abstract class Tiket { //abstract
 
     public void tampilInfo() {
         System.out.println("===== TIKET =====");
-        System.out.println("Nama     : " + penumpang.getNama());
-        System.out.println("Jenis    : " + jenis);
-        System.out.println("Tujuan   : " + tujuan);
+        System.out.println("Nama    : " + penumpang.getNama());
+        System.out.println("Kereta  : " + kereta.getNama());
+        System.out.println("Tujuan  : " + kereta.getTujuan());
     }
 }
